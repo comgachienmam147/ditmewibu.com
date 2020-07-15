@@ -3,3 +3,11 @@ font-family: Arial;
 background-color: rgb(178, 157, 104); }
 h2{
 color: #9D2319;}
+.button{
+  background-color: white;
+border-style: groove;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
