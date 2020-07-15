@@ -3,7 +3,9 @@ font-family: Arial;
 background-color: rgb(178, 157, 104); }
 h2{
 color: #9D2319;}
-h1 {text-align: center;}
+h1 {text-align: center;
+  color: black;
+}
 .button{
   background-color: white;
 border-style: groove;
