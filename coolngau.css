@@ -6,6 +6,10 @@ color: #9D2319;}
 h1 {text-align: center;
   color: black;
 }
+p {
+  background-color: white;
+  color: black;
+}
 .button{
   background-color: white;
 border-style: groove;
