@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 87.5%;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    width: 75%;
+    background-image: url("ckongu.jpg");
+    padding: 70px 30px 20px 30px;
+}
+.header
+{
+    text-align: center;
+}
+.copya
+{
+    border: 3px solid blue;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 30px 20px 30px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+#tabs-1,
+#tabs-2,
+#tabs-3
+#tabs-4
+#tabs-5 {
+    margin-bottom: 0;
+}
+.ui-dialog-buttonset .ui-button{
+    background:green;
+  }
