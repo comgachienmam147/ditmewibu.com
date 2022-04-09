@@ -7,38 +7,12 @@
       <link rel="image_src" href="ckongu.jpg"/>
       <link rel="image_src" href="dgawidgawiuydgawd.png"/>
       <link rel="icon" href="dgawidgawiuydgawd.png">
-      <link rel="stylesheet" href="jquery-ui-1.13.0/jquery-ui.min.css"/>
       <link rel="stylesheet" href="style.css"/>
-      <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-      <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="jquery-ui-1.13.0/jquery-ui.css">
+      <link rel="stylesheet" href="jquery-ui-1.13.0/jquery-ui.js">
+      <script src="jquery-ui-1.13.0/jquery-ui.js"></script>
       <meta property="og:image"
          content="https://raw.githubusercontent.com/comgachienmam147/comgachienmam147.github.io/master/ckongu.jpg"/>
-      <script>
-         $(function () {
-             var autoHeight = $("#accordion-1,#accordion-2,#accordion-3,#accordion-4,#accordion-5").accordion({
-                 active: false,
-                 collapsible: true,
-                 heightStyle: 'content',
-             });
-             $("#tabs").tabs();
-         });
-      </script>
-      <script>
-         $(document).ready(() => {
-             $(".button-copy").click(function () {
-                 let element = $(this).parents(".center").find("p");
-                 let $temp = $("<textarea></textarea>");
-                 $("body").append($temp);
-                 $temp.val($(element).html().trim().replace(/  +/g, ' ').replace(/<br\s*[\/]?>/gi, "\n")).select();
-                 document.execCommand("copy");
-                 $temp.remove();
-             })
-         })
-      </script>
-      <script>
-         var inc=0,inb=0;function mod(){inb=inc=0}function age(){var n=document.getElementById("age_e").value,e=n+" là tuổi clgt???";if(0==document.getElementById("age_e").value.length||isNaN(n))if(0==document.getElementById("age_e").value.length)document.getElementById("age_a").innerHTML="Chưa nhập gì hết.";else{switch(inc){case 0:document.getElementById("age_a").innerHTML=e;break;case 1:document.getElementById("age_a").innerHTML="Đây là lần thứ 2 rồi nhưng bạn vẫn nhập sai.";break;case 2:document.getElementById("age_a").innerHTML="Thật ra bạn chỉ bấm cái nút này cho vui thôi phải không?"}inc++}else 0==inb?(document.getElementById("age_a").innerHTML="Bạn đã "+n+" tuổi rồi.",inc=0):document.getElementById("age_a").innerHTML="Bạn đã nhấn cái nút này "+inb+" lần, tuổi của bạn vẫn là "+n,inb++;if(3<inc)for(var t=0;t<=inc;t++)document.getElementById("age_a").innerHTML=" đừng có nhấn nữa".repeat(t);6==inc&&(document.getElementById("age_a").innerHTML="nhấn thêm lần nữa xem?"),7==inc&&(document.getElementById("age_a").innerHTML="chắc chưa?",document.getElementById("nut_adawdawdawdawdawd").innerHTML="chắc."),7<inc&&(window.location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")}
-      </script>
    </head>
    <body>
       <div class="copya">
@@ -1305,5 +1279,30 @@
             </div> <!-- div cua tab 5 -->
          </div>  <!-- div cua tat ca cac tab -->
       </div> <!-- deo biet day la gi nhung khong co thi sap UI -->
+      <script>
+         $(function () {
+             var autoHeight = $("#accordion-1,#accordion-2,#accordion-3,#accordion-4,#accordion-5").accordion({
+                 active: false,
+                 collapsible: true,
+                 heightStyle: 'content',
+             });
+             $("#tabs").tabs();
+         });
+      </script>
+      <script>
+         $(document).ready(() => {
+             $(".button-copy").click(function () {
+                 let element = $(this).parents(".center").find("p");
+                 let $temp = $("<textarea></textarea>");
+                 $("body").append($temp);
+                 $temp.val($(element).html().trim().replace(/  +/g, ' ').replace(/<br\s*[\/]?>/gi, "\n")).select();
+                 document.execCommand("copy");
+                 $temp.remove();
+             })
+         })
+      </script>
+      <script>
+         var inc=0,inb=0;function mod(){inb=inc=0}function age(){var n=document.getElementById("age_e").value,e=n+" là tuổi clgt???";if(0==document.getElementById("age_e").value.length||isNaN(n))if(0==document.getElementById("age_e").value.length)document.getElementById("age_a").innerHTML="Chưa nhập gì hết.";else{switch(inc){case 0:document.getElementById("age_a").innerHTML=e;break;case 1:document.getElementById("age_a").innerHTML="Đây là lần thứ 2 rồi nhưng bạn vẫn nhập sai.";break;case 2:document.getElementById("age_a").innerHTML="Thật ra bạn chỉ bấm cái nút này cho vui thôi phải không?"}inc++}else 0==inb?(document.getElementById("age_a").innerHTML="Bạn đã "+n+" tuổi rồi.",inc=0):document.getElementById("age_a").innerHTML="Bạn đã nhấn cái nút này "+inb+" lần, tuổi của bạn vẫn là "+n,inb++;if(3<inc)for(var t=0;t<=inc;t++)document.getElementById("age_a").innerHTML=" đừng có nhấn nữa".repeat(t);6==inc&&(document.getElementById("age_a").innerHTML="nhấn thêm lần nữa xem?"),7==inc&&(document.getElementById("age_a").innerHTML="chắc chưa?",document.getElementById("nut_adawdawdawdawdawd").innerHTML="chắc."),7<inc&&(window.location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")}
+      </script>
    </body>
 </html>
