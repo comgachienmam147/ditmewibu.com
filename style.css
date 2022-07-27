@@ -1,31 +1,48 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 87.5%;
-    background-color: rgb(255, 255, 255);
-    margin: 0 auto;
-    width: 75%;
-    background-image: url("ckongu.jpg");
-    padding: 70px 30px 20px 30px;
+html, body {
+    height: 100%;
+    margin:0;
+  }
+  
+.header {
+    padding: 150px;
+    text-align: center;
+    color: rgb(43, 33, 33);
+    font-size: 25px;
+    background-image: url("chongu.jpg");                /* <------ */
+    background-repeat: no-repeat;  
+    background-position: 0% 0%;
+    background-size: 100% 100%;
 }
-.header
-{
+
+.wrapper {
+    min-height: 100%;
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+}
+
+.footer{
+    padding: 5px;
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(54, 58, 58);
+    height: 50px;
+}
+
+.push {
+    height: 50px;
+}
+
+
+.ui-tabs .ui-tabs-nav {
     text-align: center;
 }
-.copya
-{
-    border: 3px solid blue;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 30px 20px 30px;
-    margin: 0 auto;
-    margin-bottom: 1em;
+
+.ui-tabs .ui-tabs-nav li {
+    float: none !important;
+    display: inline-block;
 }
-#tabs-1,
-#tabs-2,
-#tabs-3
-#tabs-4
-#tabs-5 {
-    margin-bottom: 0;
+
+.ui-dialog-buttonset .ui-button {
+    background: green;
 }
-.ui-dialog-buttonset .ui-button{
-    background:green;
-  }
