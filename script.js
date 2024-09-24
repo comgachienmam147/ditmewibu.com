@@ -128,7 +128,7 @@ function addContributionTab() {
             Chúng tôi (hoặc 1 thằng) sẽ rất vui lòng thêm nó vào web nếu như đoạn văn mẫu đấy chưa có sẵn trên này.
         </h3>
         <div class="google_form" style="text-align:center;">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdQgTj8afmr-iq_l8Kq3D-cDtg7avvp6FNGHU7fZwV4azUijg/viewform?embedded=true" width="640" height="479" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeP6YvXHLXef5SWfc1RKsXd3AWG4e005j8OnYGr6VyM9VwXlQ/viewform?embedded=true" width="640" height="714" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         </div>
     `;
 
