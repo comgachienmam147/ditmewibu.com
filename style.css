@@ -6,10 +6,12 @@ html, body {
 .header {
     padding: 100px;
     text-align: center;
+    /* 
     color: aliceblue;
     font-size: 36px;
     font-weight: bold;
-    /* background-image: url("background.jpg");    */            /* <------ */
+    background-image: url("background.jpg");    
+    */            /* <------ */
     background-repeat: no-repeat;  
     background-position: 0% 0%;
     background-size: 100% 100%;
