@@ -6,8 +6,9 @@ html, body {
 .header {
     padding: 150px;
     text-align: center;
-    color: rgb(43, 33, 33);
-    font-size: 25px;
+    color: #4682B4;
+    font-size: 36px;
+    font-weight: bold;
     /* background-image: url("background.jpg");    */            /* <------ */
     background-repeat: no-repeat;  
     background-position: 0% 0%;
