@@ -189,14 +189,17 @@ function age() {
 }
 
 function onSearch(index, searchText) {
+    if (!searchText.length) {
+        return;
+    }
     const $tab = $(`#tabs-${index}`);
     $tab.children().slice(1).remove();
     const filteredPlatitudes = platitudes.filter(van => van.title.toLowerCase().includes(searchText.toLowerCase())
         || van.content.toLowerCase().includes(searchText.toLowerCase()));
     const $accordion = $('<div>', {id: `accordion-${index}`, class: 'accordion'});
     $tab.append($accordion);
+    const regex = new RegExp(`(${searchText})`, 'gi');
     filteredPlatitudes.forEach((item, itemIndex) => {
-        const regex = new RegExp(`(${searchText})`, 'gi');
         const $header = $('<h2>').html(item.title.replaceAll(regex, '<mark>$1</mark>'));
         const $paragraph = $('<div>').append(
             $('<p>', {id: `copypasta-${index}-${itemIndex + 1}`}).html(item.content.replaceAll(regex, '<mark>$1</mark>')),
