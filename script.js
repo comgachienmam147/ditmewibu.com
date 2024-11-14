@@ -13,6 +13,8 @@ function copyText(id) {
     document.body.removeChild(elem);
 }
 
+const platitudes = []
+
 function fetchTextFromFile(filename) {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', filename, true);
@@ -38,7 +40,9 @@ function fetchTextFromFile(filename) {
                     }
 
                     // Push the content title and content into the tab's array
-                    tabsData[tabTitle].push({ title: contentTitle, content: content });
+                    const platitude = { title: contentTitle, content: content };
+                    platitudes.push(platitude);
+                    tabsData[tabTitle].push(platitude);
                 }
             });
 
@@ -69,6 +73,9 @@ function fetchTextFromFile(filename) {
                 });
             });
 
+            // Add search tab
+            addSearchTab();
+
             // Add an age calculator tab
             addAgeCalculatorTab();
 
@@ -90,6 +97,24 @@ function fetchTextFromFile(filename) {
     };
 
     xhr.send();
+}
+
+function addSearchTab() {
+    const tabTitle = 'Tìm văn mẫu';
+    const tabIndex = $('#panels li').length + 1;
+    const tabId = `tabs-${tabIndex}`;
+    $('#panels').append(`<li><a href="#${tabId}">${tabTitle}</a></li>`);
+    $('#tabs').append(`<section id="${tabId}"></section>`);
+
+    // Add specified HTML content directly to the new tab
+    const htmlContent = `
+        <div class="centered">
+            <input type="text" placeholder="Nhập từ khóa" onkeyup="onSearch(${tabIndex}, this.value.trim());">
+            <hr>
+        </div>
+    `;
+
+    $(`#${tabId}`).append(htmlContent);
 }
 
 function addAgeCalculatorTab() {
@@ -160,5 +185,33 @@ function age() {
         for (var t = 0; t <= inc; t++) document.getElementById("age_a").innerHTML = " đừng có nhấn nữa".repeat(t); 
     6 == inc && (document.getElementById("age_a").innerHTML = "nhấn thêm lần nữa xem?"), 
     7 == inc && (document.getElementById("age_a").innerHTML = "chắc chưa?", document.getElementById("nut_adawdawdawdawdawd").innerHTML = "chắc."), 
-    7 < inc && (window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"); 
+    7 < inc && (window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+}
+
+function onSearch(index, searchText) {
+    if (!searchText.length) {
+        return;
+    }
+    const $tab = $(`#tabs-${index}`);
+    $tab.children().slice(1).remove();
+    const filteredPlatitudes = platitudes.filter(van => van.title.toLowerCase().includes(searchText.toLowerCase())
+        || van.content.toLowerCase().includes(searchText.toLowerCase()));
+    const $accordion = $('<div>', {id: `accordion-${index}`, class: 'accordion'});
+    $tab.append($accordion);
+    const regex = new RegExp(`(${searchText})`, 'gi');
+    filteredPlatitudes.forEach((item, itemIndex) => {
+        const $header = $('<h2>').html(item.title.replaceAll(regex, '<mark>$1</mark>'));
+        const $paragraph = $('<div>').append(
+            $('<p>', {id: `copypasta-${index}-${itemIndex + 1}`}).html(item.content.replaceAll(regex, '<mark>$1</mark>')),
+            $('<div>', {class: 'copy-button-container'}).append(
+                $('<button>', {text: 'Nhấn để copy'}).click(() => copyText(`copypasta-${index}-${itemIndex + 1}`))
+            )
+        );
+        $accordion.append($header, $paragraph);
+    });
+    $accordion.accordion({
+        active: false,
+        collapsible: true,
+        heightStyle: 'content',
+    });
 }
